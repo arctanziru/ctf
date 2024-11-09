@@ -11,7 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Make HTTP Request with JSON Header
+      - name: Make HTTP Request with Custom Header
         run: |
           curl -X GET https://actions.ctf.cert.unlp.edu.ar \
-          -H "Content-Type: application/json"
+          -H "Content-Type: application/json" \
+          -H "X-CERTUNLP: flag"
