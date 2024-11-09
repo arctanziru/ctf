@@ -11,8 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Make HTTP POST Request
+      - name: Make HTTP Request with JSON Header
         run: |
-          curl -X POST https://actions.ctf.cert.unlp.edu.ar \
-          -H "Content-Type: application/json" \
-          -d '{"key": "value"}'
+          curl -X GET https://actions.ctf.cert.unlp.edu.ar \
+          -H "Content-Type: application/json"
